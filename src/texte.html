@@ -1,157 +1,4 @@
 <!doctype html>
-<html lang="en" class="h-100">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.84.0">
-    <title>Conversor Online- rublo to Kwanza</title>
-    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
-<link rel="icon" href="./public/img/logo.webp">
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
-
-    
-
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <style>
-          #fundoImg{
-             
-            background-image: url("./public/img/Explore-illo.svg");
-             background-repeat: no-repeat;
-             background-size: cover;
-         }
-         #fundo{
-             background-color: rgba(74, 78, 76, 0.693);
-         }
-     
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
-    
-    <!-- Custom styles for this template -->
-    
-  </head>
-  <body class="d-flex h-100  ">
-    
-<div class="cover-container d-flex w-100 h-100  mx-auto flex-column">
-    <nav class="container">
-
-
-
-      
-        <header class="mb-auto text-center ">
-            <div>
-              <h3 class="float-start mb-0" style="color: #198545;">Conversor</h3>
-              <nav class="nav nav-masthead justify-content-center float-md-end">
-                  
-                <a class="nav-link" href="#">Contact</a>
-              </nav>
-            </div>
-          </header>
-          
-    </nav>
- <br>
-
-
- <div class="carousel text-center " id="fundoImg">
-    <div id="fundo">
-        <img   class="d-block w-100"  height="550" >
-        <div class="carousel-caption  ">
-            <h1><strong>Conversor online informal</strong></h1>
-            <br>
-            <p class="lead"> Tenha acesso em tempo real às melhores taxas de câmbio informal. </p>
-            <form class="row d-flex justify-content-center" style="align-content: center;" id="send">
-             
-                <div class="col-auto">
-                   
-                  <input type="number" class="form-control" id="coin" value="1000">
-                </div>
-              <div class="col-auto">
-                  <select id="cointype" class="form-control" >
-                      <option value="rub">RUB</option>
-                     <option value="usd">USD</option>
-                     <option value="eur">EUR</option>
-                     
-                   </select>
-              </div>
-               
-
-              
-              
-             
-              <div class=" mt-3">
-                <button type="submit" class="btn btn-success mb-3" id="send">Converter</button>
-              </div>
-            </form>
-            
-            <br>
-
-       </div> 
-       <span class="mt-3">
-
-       </span>
-      
-    </div>
-    
-     
-</div>
-
-<div class="container">
-
-  <br>
-  <h3>Resultado da conversão</h3>
-  <div class="row row-cols-1 row-cols-md-2 g-4">
-    
-     
-    <div class="col">
-      <div class="card">
-         
-        <div class="card-body">
-           
-          <p class="card-text">Conversão de: RUB<br> 
-            Valor a converter: <strong id="defaulCoin"></strong>
-          <br> <br>
-        Ultima Atualização <br>
-      <strong id="atualizadas"></strong></p>
-  
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-     
-        <div class="card-body">
-          
-          <p class="card-text" >Para: AOA  <br>
-            Resultado da conversão: <br>
-          Valor Minimo: <strong id="min"></strong>
-         <br> Valor Normal: <strong id="nor"></strong>
-          <br> Valor MAximo: <strong id="max"></strong>
-          
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<br>
-<div class="container">
-  <!doctype html>
 <html class="zc-html">
 
 <head>
@@ -176,8 +23,8 @@
 </head>
 ​
 
-<div class="zc-body">
-  
+<body class="zc-body">
+  ​
   <div id="myChart" class="chart--container">
     <a href="https://www.zingchart.com/" rel="noopener" class="zc-ref">Powered by ZingChart</a>
   </div>
@@ -196,7 +43,7 @@
           x: '0px',
           y: '0px',
           title: {
-            text: 'min',
+            text: 'Energy Output',
             mediaRules: [{
               maxWidth: '650px',
               visible: false,
@@ -484,7 +331,7 @@
           x: '0px',
           y: '45%',
           title: {
-            text: 'Valor History',
+            text: 'Meter History',
             adjustLayout: true,
             mediaRules: [{
               fontSize: '14px',
@@ -565,7 +412,7 @@
             y: '60%',
           }, ],
           series: [{
-              text: 'Valor Maximo',
+              text: 'Energy Output',
               values: [35, 38, 40, 35, 38, 40, 35, 38, 40],
               lineColor: '#00AE4D',
               marker: {
@@ -577,7 +424,7 @@
               scales: 'scale-x, scale-y-3',
             },
             {
-              text: 'Valor Normal',
+              text: 'Energy Recycled',
               values: [11, 15, 19, 11, 15, 19, 11, 15, 19],
               lineColor: '#E2D51A',
               marker: {
@@ -590,8 +437,8 @@
               scales: 'scale-x, scale-y-2',
             },
             {
-              text: 'Valor Minino',
-              values: [1],
+              text: 'Energy Consumed',
+              values: [28, 21, 30, 28, 21, 30, 28, 21, 30],
               lineColor: '#FB301E',
               marker: {
                 type: 'square',
@@ -704,202 +551,6 @@
       zingchart.exec('myChart', 'update');
     }, 1500);
   </script>
-</div>
- 
-</div>
+</body>
 
-<div class="container">
-  <div class="card">
-         
-    <div class="card-body">
-       
-      <p class="card-text">  
-        <ul>
-          <li>
-          
-        O cálculo efetuado tem caráter informativo e não substitui as disposições da norma cambial para casos específicos de conversão.
-        
-          </li>
-          <li>
-            Conversões disponíveis são dinamica e não estaticas
-          </li>
-          <li>
-            Para dias não assume-se a cotação do dia útil imediatamente anterior.
-          </li>
-        </ul>
-         </p>
-
-    </div>
-  </div>
-</div>
- 
- <div class="container" id="background">
-  
-    <div class="mt-4">
-<br><br>
-        
-        </div>
-   
- </div>
- <br>
-
- <nav class="container text-center " style="background-color: rgb(74, 78, 76); color: white;">
-    <br>
-    <br>
-    <br>
-   <br>
-    <main class="px-3"  >
-
-        <div class="container" >
-            <h1> </h1>
-
-
-            <div class="container mt-5">
-         
-           
-                <div class="row justify-content-center">
-                    <div class="text-center col-md-4">
-                         <h1 class="display-4" id="sobre">Sobre o <strong id="study" style="color: #198545;">Conversor </strong>online informal
-                         </h1>
-                         <p class="lead"><b><i>         
-                            *Estamos aqui para facilitar a conversão.*   </i></b></p>
-                    </div>
-                   
-                    <p class="text-justify col-md-8" style="font-family: 18px inter, sans-serif;">
-                        <br> 
-                        Conversor online informal  Criado com objectivo de facilitar a conversão de moeda no cambio informal entre Kwanza e Rublo em Tempo real.
-        
-    <br> Nossa ideia  é oferecer um serviço rápido e confiável, com taxas atualizadas de câmbio informal para
-    garantir que você tenha informações precisas no momento certo. 
-    
-    
-                        .  
-                    </p>
-                    <h1 lang="display-4" align="center"><a class="btn btn-success btn-lg" role="button" onclick="alert('brevemente')">Comece </a> </h1>
-                 
-                </div>
-             </div>
-        
-
-
-
-
-        
-       
- 
-            
-        </div>
-
-        <br>
-        <br>
-
-        
-       
-      </main>
-</nav>
-<br>
-
-
-<nav>
-    <div class="container mt-5 text-center ">
-      <h4>Facilidade de uso</h4>
-           
-        <div class="row justify-content-center">
-            <p class="text-justify col-md-8" ><br>
-             
-                <br>
-                Conectamos você ao mercado de câmbio informal em tempo real <br> 
-                Nossa interface foi projetada para simplificar o processo de conversão, tornando-o acessível para todos, independentemente do nível de conhecimento técnico. 
-
-                 
-            </p>
-            <div class="text-center col-md-4">
-                 <h1  id="sobre">
-                    <img class="display-4" src="./public/img/wallet-illo.svg" alt="" width="100%">>
-             
-            </div>
-           
-           
-    
-         
-        </div>
-     </div>
-
-     <div class="container mt-5 text-center ">
-         
-      <h4>Atualizações em tempo real</h4>
-        <div class="row justify-content-center">
-            <div class="text-center col-md-4">
-                 <img src="./public/img/Browse-illo.svg" alt="" width="100%">
-            </div>
-           
-            <p class="text-justify col-md-8" style="font-family: 18px inter, sans-serif;">
-                <br> 
-                Convidamos você a explorar nossa plataforma e descobrir como podemos transformar a maneira comoF você realiza conversões entre o Kwanza e o Rublo. Trabalhamos para facilitar sua compra/venda de moeda e criar um serviço que você pode confiar. 
-                <br>
-                Atualizações em tempo real:* As taxas de câmbio informal são constantemente monitoradas e atualizadas para oferecer precisão nas conversões.  
-            </p> 
-        </div>
-     </div>
-</nav>
-
- 
-        
-     
-     
- 
-  
-
-  <footer class="mt-auto text-white-50" style="width: 100%;">
-    
-    <nav style="background-color: rgb(74, 78, 76); color: rgb(17, 16, 16); ">
-      <div class="container mt-5">
-            
-               
-        <div class="row justify-content-center">
-         
-               <div class="container mt-3">
-             
-                <div class="row justify-content-center">
-                    <div class="col-12 mb-4"><hr> </div>
-                     <h4 align="center" id="contatos">Converse Conosco</h4>
-                    <div class="col-sm-4">
-                        <h4 class="text-center" id="contacto">Social</h4>
-                        <div class="btn-group-vertical btn-block w-100 " role="group">
-                            <a href="#" class="btn btn-outline-primary">facebook</a>
-                            <a href="#" class="btn btn-outline-info">Twitter</a>
-                            <a href="#" class="btn btn-outline-warning">Instragram</a>
-            
-                        </div>
-                    </div>
-                    <div class="col-12 mt-3">
-                        <blockquote class="blockquote text-center">
-                            <p>Todos os direitos reservados</p>
-                            <div class="blockquote-footer">
-                                Copyright-2025
-                                <cite title="Titulo">Conversor online</cite>
-                            </div>
-                        </blockquote>
-                    </div>
-                </div>
-          </div>
-      
-             
-             
-       
-           
-         
-        
-     </div>
-    </nav>
-
-
-  </footer>
-</div>
-
-
-    
-  </body>
-  <script src="./public/js/getdata.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>

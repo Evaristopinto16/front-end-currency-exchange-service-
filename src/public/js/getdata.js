@@ -46,9 +46,10 @@ send.addEventListener("submit", (data)=>{
     let value = data.srcElement[0].value
     coin = value
     console.log(coin);
+    let typecoin = document.querySelector("#cointype").value
 
     const dado = {
-        coin: "rub",
+        coin: typecoin,
         conversionto:"aoa",
         value: coin
     }
@@ -60,9 +61,12 @@ send.addEventListener("submit", (data)=>{
 if(coin == " "|| coin == undefined || coin == null){
      coin = document.querySelector("#coin").value
     document.querySelector("#defaulCoin").innerHTML = coin
+    let typecoin = document.querySelector("#cointype").value
+
+    console.log(typecoin)
 
     const dado = {
-        coin: "rub",
+        coin: typecoin,
         conversionto:"aoa",
         value: coin
     }
