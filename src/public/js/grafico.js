@@ -4,339 +4,7 @@ let chartConfig = {
     },
     backgroundColor: '#fff',
     graphset: [
-      {
-        type: 'gauge',
-        width: '31.5%',
-        height: '50%',
-        x: '0px',
-        y: '0px',
-        title: {
-          text: 'Energy Output',
-          mediaRules: [
-            {
-              maxWidth: '650px',
-              visible: false,
-            },
-          ],
-        },
-        plot: {
-          csize: '3%',
-          size: '100%',
-        },
-        plotarea: {
-          marginTop: '35%',
-        },
-        scale: {
-          sizeFactor: 1.2,
-          mediaRules: [
-            {
-              maxWidth: '650px',
-              sizeFactor: 1.6,
-            },
-          ],
-        },
-        scaleR: {
-          values: '0:40:10',
-          aperture: 130,
-          center: {
-            borderColor: '#23211E',
-            borderWidth: '2px',
-            mediaRules: [
-              {
-                maxWidth: '650px',
-                size: '10px',
-              },
-            ],
-            size: '20px',
-          },
-          guide: {
-            alpha: 1,
-            backgroundColor: '#E3DEDA',
-          },
-          item: {
-            offsetR: 0,
-          },
-          markers: [
-            {
-              type: 'area',
-              alpha: 0.95,
-              backgroundColor: '#00AE4D',
-              range: [0, 35],
-            },
-          ],
-          ring: {
-            backgroundColor: '#E3DEDA',
-            mediaRules: [
-              {
-                maxWidth: '650px',
-                visible: false,
-              },
-            ],
-          },
-          tick: {
-            visible: false,
-          },
-        },
-        tooltip: {
-          visible: false,
-        },
-        mediaRules: [
-          {
-            maxWidth: '650px',
-            width: '100%',
-            height: '20%',
-            x: '0px',
-            y: '2%',
-          },
-          {
-            minWidth: '651px',
-            width: '31.5%',
-            height: '50%',
-            x: '0px',
-            y: '0px',
-          },
-        ],
-        series: [
-          {
-            values: [35],
-            valueBox: {
-              text: '%v',
-              fontColor: '#00AE4D',
-              fontSize: '14px',
-              mediaRules: [
-                {
-                  fontSize: '10px',
-                  maxWidth: '650px',
-                },
-              ],
-              placement: 'center',
-            },
-            backgroundColor: '#23211E',
-          },
-        ],
-      },
-      {
-        type: 'gauge',
-        width: '31.5%',
-        height: '50%',
-        x: '34.5%',
-        y: '0px',
-        title: {
-          text: 'Energy Recycled',
-          mediaRules: [
-            {
-              maxWidth: '650px',
-              visible: false,
-            },
-          ],
-        },
-        plot: {
-          csize: '3%',
-          size: '100%',
-        },
-        plotarea: {
-          marginTop: '35%',
-        },
-        scale: {
-          sizeFactor: 1.2,
-          mediaRules: [
-            {
-              maxWidth: '650px',
-              sizeFactor: 1.6,
-            },
-          ],
-        },
-        scaleR: {
-          values: '0:20:5',
-          aperture: 130,
-          center: {
-            borderColor: '#23211E',
-            borderWidth: '2px',
-            mediaRules: [
-              {
-                maxWidth: '650px',
-                size: '10px',
-              },
-            ],
-            size: '20px',
-          },
-          guide: {
-            alpha: 1,
-            backgroundColor: '#E3DEDA',
-          },
-          item: {
-            offsetR: 0,
-          },
-          markers: [
-            {
-              type: 'area',
-              alpha: 0.95,
-              backgroundColor: '#E2D51A',
-              range: [0, 11],
-            },
-          ],
-          ring: {
-            backgroundColor: '#E3DEDA',
-            mediaRules: [
-              {
-                maxWidth: '650px',
-                visible: false,
-              },
-            ],
-          },
-          tick: {
-            visible: false,
-          },
-        },
-        tooltip: {
-          visible: false,
-        },
-        mediaRules: [
-          {
-            maxWidth: '650px',
-            width: '100%',
-            height: '20%',
-            x: '0px',
-            y: '20%',
-          },
-          {
-            minWidth: '651px',
-            width: '31.5%',
-            height: '50%',
-            x: '34.5%',
-            y: '0px',
-          },
-        ],
-        series: [
-          {
-            values: [11],
-            valueBox: {
-              text: '%v',
-              fontColor: '#E2D51A',
-              fontSize: '14px',
-              mediaRules: [
-                {
-                  fontSize: '10px',
-                  maxWidth: '650px',
-                },
-              ],
-              placement: 'center',
-            },
-            backgroundColor: '#23211E',
-          },
-        ],
-      },
-      {
-        type: 'gauge',
-        width: '31.5%',
-        height: '50%',
-        x: '69%',
-        y: '0px',
-        title: {
-          text: 'Energy Consumed',
-          mediaRules: [
-            {
-              maxWidth: '650px',
-              visible: false,
-            },
-          ],
-        },
-        plot: {
-          csize: '3%',
-          size: '100%',
-        },
-        plotarea: {
-          marginTop: '35%',
-        },
-        scale: {
-          sizeFactor: 1.2,
-          mediaRules: [
-            {
-              maxWidth: '650px',
-              sizeFactor: 1.6,
-            },
-          ],
-        },
-        scaleR: {
-          values: '0:100:25',
-          aperture: 130,
-          center: {
-            borderColor: '#23211E',
-            borderWidth: '2px',
-            mediaRules: [
-              {
-                maxWidth: '650px',
-                size: '10px',
-              },
-            ],
-            size: '20px',
-          },
-          guide: {
-            alpha: 1,
-            backgroundColor: '#E3DEDA',
-          },
-          item: {
-            offsetR: 0,
-          },
-          markers: [
-            {
-              type: 'area',
-              alpha: 0.95,
-              backgroundColor: '#FB301E',
-              range: [0, 28],
-            },
-          ],
-          ring: {
-            backgroundColor: '#E3DEDA',
-            mediaRules: [
-              {
-                maxWidth: '650px',
-                visible: false,
-              },
-            ],
-          },
-          tick: {
-            visible: false,
-          },
-        },
-        tooltip: {
-          visible: false,
-        },
-        mediaRules: [
-          {
-            maxWidth: '650px',
-            width: '100%',
-            height: '20%',
-            x: '0px',
-            y: '40%',
-          },
-          {
-            minWidth: '651px',
-            width: '31.5%',
-            height: '50%',
-            x: '69%',
-            y: '0px',
-          },
-        ],
-        series: [
-          {
-            values: [28],
-            valueBox: {
-              text: '%v',
-              fontColor: '#FB301E',
-              fontSize: '14px',
-              mediaRules: [
-                {
-                  fontSize: '10px',
-                  maxWidth: '650px',
-                },
-              ],
-              placement: 'center',
-            },
-            backgroundColor: '#23211E',
-          },
-        ],
-      },
+      
       {
         type: 'line',
         width: '100%',
@@ -344,7 +12,7 @@ let chartConfig = {
         x: '0px',
         y: '45%',
         title: {
-          text: 'Meter History',
+          text: 'History',
           adjustLayout: true,
           mediaRules: [
             {
@@ -363,12 +31,9 @@ let chartConfig = {
           marginRight: '4%',
         },
         scaleX: {
-          minValue: 1373045400000,
-          step: 3000,
-          transform: {
-            type: 'date',
-            all: '%D<br>%H:%i:%s',
-          },
+          minValue:[1,2,1,2,2],
+           
+          
         },
         scaleY: {
           values: '0:100:25',
@@ -431,7 +96,7 @@ let chartConfig = {
         series: [
           {
             text: 'Energy Output',
-            values: [35, 38, 40, 35, 38, 40, 35, 38, 40],
+            values: [95, 38, 40, 35, 38, 40, 35, 38, 40],
             lineColor: '#00AE4D',
             marker: {
               type: 'circle',
@@ -443,7 +108,7 @@ let chartConfig = {
           },
           {
             text: 'Energy Recycled',
-            values: [11, 15, 19, 11, 15, 19, 11, 15, 19],
+            values: [11, 15, 19, 11, 15, 19, 91, 15, 19],
             lineColor: '#E2D51A',
             marker: {
               type: 'triangle',
@@ -456,7 +121,7 @@ let chartConfig = {
           },
           {
             text: 'Energy Consumed',
-            values: [28, 21, 30, 28, 21, 30, 28, 21, 30],
+            values: [28, 21, 30, 28, 21, 30, 28, 21, 90],
             lineColor: '#FB301E',
             marker: {
               type: 'square',
@@ -493,73 +158,8 @@ let chartConfig = {
         alpha: 0.95,
       };
     };
-    let randomOffset0 = [-5, 5, 3, -3, 2, -2];
-    let randomOffset1 = [10, -10, -5, 5, 3, -3, 2, -2, 7, -7];
-    let output0 = Math.ceil(33 + randomOffset0[Math.floor(Math.random() * 6)]);
-    let output1 = Math.ceil(11 + randomOffset0[Math.floor(Math.random() * 6)]);
-    let output2 = Math.ceil(22 + randomOffset1[Math.floor(Math.random() * 9)]);
+ 
   
-    // 1) update gauge values
-    zingchart.exec('myChart', 'appendseriesdata', {
-      graphid: 0,
-      plotindex: 0,
-      update: false,
-      data: {
-        values: [output0],
-      },
-    });
-    zingchart.exec('myChart', 'appendseriesdata', {
-      graphid: 1,
-      plotindex: 0,
-      update: false,
-      data: {
-        values: [output1],
-      },
-    });
-    zingchart.exec('myChart', 'appendseriesdata', {
-      graphid: 2,
-      plotindex: 0,
-      update: false,
-      data: {
-        values: [output2],
-      },
-    });
-  
-    // 2) update guage markers
-    zingchart.exec('myChart', 'modify', {
-      graphid: 0,
-      update: false,
-      data: {
-        scaleR: {
-          markers: [Marker(colors[0], output0)],
-        },
-      },
-    });
-    zingchart.exec('myChart', 'modify', {
-      graphid: 1,
-      update: false,
-      data: {
-        scaleR: {
-          markers: [Marker(colors[1], output1)],
-        },
-      },
-    });
-    zingchart.exec('myChart', 'modify', {
-      graphid: 2,
-      update: false,
-      data: {
-        scaleR: {
-          markers: [Marker(colors[2], output2)],
-        },
-      },
-    });
-  
-    // 3) update line graph
-    zingchart.exec('myChart', 'appendseriesvalues', {
-      graphid: 3,
-      update: false,
-      values: [[output0], [output1], [output2]],
-    });
   
     // batch update all chart modifications
     zingchart.exec('myChart', 'update');

@@ -23,7 +23,7 @@
 </head>
 ​
 
-<body class="zc-body">
+<body>
   ​
   <div id="myChart" class="chart--container">
     <a href="https://www.zingchart.com/" rel="noopener" class="zc-ref">Powered by ZingChart</a>
@@ -36,294 +36,11 @@
         color: '#666',
       },
       backgroundColor: '#fff',
-      graphset: [{
-          type: 'gauge',
-          width: '31.5%',
-          height: '50%',
-          x: '0px',
-          y: '0px',
-          title: {
-            text: 'Energy Output',
-            mediaRules: [{
-              maxWidth: '650px',
-              visible: false,
-            }, ],
-          },
-          plot: {
-            csize: '3%',
-            size: '100%',
-          },
-          plotarea: {
-            marginTop: '35%',
-          },
-          scale: {
-            sizeFactor: 1.2,
-            mediaRules: [{
-              maxWidth: '650px',
-              sizeFactor: 1.6,
-            }, ],
-          },
-          scaleR: {
-            values: '0:40:10',
-            aperture: 130,
-            center: {
-              borderColor: '#23211E',
-              borderWidth: '2px',
-              mediaRules: [{
-                maxWidth: '650px',
-                size: '10px',
-              }, ],
-              size: '20px',
-            },
-            guide: {
-              alpha: 1,
-              backgroundColor: '#E3DEDA',
-            },
-            item: {
-              offsetR: 0,
-            },
-            markers: [{
-              type: 'area',
-              alpha: 0.95,
-              backgroundColor: '#00AE4D',
-              range: [0, 35],
-            }, ],
-            ring: {
-              backgroundColor: '#E3DEDA',
-              mediaRules: [{
-                maxWidth: '650px',
-                visible: false,
-              }, ],
-            },
-            tick: {
-              visible: false,
-            },
-          },
-          tooltip: {
-            visible: false,
-          },
-          mediaRules: [{
-              maxWidth: '650px',
-              width: '100%',
-              height: '20%',
-              x: '0px',
-              y: '2%',
-            },
-            {
-              minWidth: '651px',
-              width: '31.5%',
-              height: '50%',
-              x: '0px',
-              y: '0px',
-            },
-          ],
-          series: [{
-            values: [35],
-            valueBox: {
-              text: '%v',
-              fontColor: '#00AE4D',
-              fontSize: '14px',
-              mediaRules: [{
-                fontSize: '10px',
-                maxWidth: '650px',
-              }, ],
-              placement: 'center',
-            },
-            backgroundColor: '#23211E',
-          }, ],
-        },
-        {
-          type: 'gauge',
-          width: '31.5%',
-          height: '50%',
-          x: '34.5%',
-          y: '0px',
-          title: {
-            text: 'Energy Recycled',
-            mediaRules: [{
-              maxWidth: '650px',
-              visible: false,
-            }, ],
-          },
-          plot: {
-            csize: '3%',
-            size: '100%',
-          },
-          plotarea: {
-            marginTop: '35%',
-          },
-          scale: {
-            sizeFactor: 1.2,
-            mediaRules: [{
-              maxWidth: '650px',
-              sizeFactor: 1.6,
-            }, ],
-          },
-          scaleR: {
-            values: '0:20:5',
-            aperture: 130,
-            center: {
-              borderColor: '#23211E',
-              borderWidth: '2px',
-              mediaRules: [{
-                maxWidth: '650px',
-                size: '10px',
-              }, ],
-              size: '20px',
-            },
-            guide: {
-              alpha: 1,
-              backgroundColor: '#E3DEDA',
-            },
-            item: {
-              offsetR: 0,
-            },
-            markers: [{
-              type: 'area',
-              alpha: 0.95,
-              backgroundColor: '#E2D51A',
-              range: [0, 11],
-            }, ],
-            ring: {
-              backgroundColor: '#E3DEDA',
-              mediaRules: [{
-                maxWidth: '650px',
-                visible: false,
-              }, ],
-            },
-            tick: {
-              visible: false,
-            },
-          },
-          tooltip: {
-            visible: false,
-          },
-          mediaRules: [{
-              maxWidth: '650px',
-              width: '100%',
-              height: '20%',
-              x: '0px',
-              y: '20%',
-            },
-            {
-              minWidth: '651px',
-              width: '31.5%',
-              height: '50%',
-              x: '34.5%',
-              y: '0px',
-            },
-          ],
-          series: [{
-            values: [11],
-            valueBox: {
-              text: '%v',
-              fontColor: '#E2D51A',
-              fontSize: '14px',
-              mediaRules: [{
-                fontSize: '10px',
-                maxWidth: '650px',
-              }, ],
-              placement: 'center',
-            },
-            backgroundColor: '#23211E',
-          }, ],
-        },
-        {
-          type: 'gauge',
-          width: '31.5%',
-          height: '50%',
-          x: '69%',
-          y: '0px',
-          title: {
-            text: 'Energy Consumed',
-            mediaRules: [{
-              maxWidth: '650px',
-              visible: false,
-            }, ],
-          },
-          plot: {
-            csize: '3%',
-            size: '100%',
-          },
-          plotarea: {
-            marginTop: '35%',
-          },
-          scale: {
-            sizeFactor: 1.2,
-            mediaRules: [{
-              maxWidth: '650px',
-              sizeFactor: 1.6,
-            }, ],
-          },
-          scaleR: {
-            values: '0:100:25',
-            aperture: 130,
-            center: {
-              borderColor: '#23211E',
-              borderWidth: '2px',
-              mediaRules: [{
-                maxWidth: '650px',
-                size: '10px',
-              }, ],
-              size: '20px',
-            },
-            guide: {
-              alpha: 1,
-              backgroundColor: '#E3DEDA',
-            },
-            item: {
-              offsetR: 0,
-            },
-            markers: [{
-              type: 'area',
-              alpha: 0.95,
-              backgroundColor: '#FB301E',
-              range: [0, 28],
-            }, ],
-            ring: {
-              backgroundColor: '#E3DEDA',
-              mediaRules: [{
-                maxWidth: '650px',
-                visible: false,
-              }, ],
-            },
-            tick: {
-              visible: false,
-            },
-          },
-          tooltip: {
-            visible: false,
-          },
-          mediaRules: [{
-              maxWidth: '650px',
-              width: '100%',
-              height: '20%',
-              x: '0px',
-              y: '40%',
-            },
-            {
-              minWidth: '651px',
-              width: '31.5%',
-              height: '50%',
-              x: '69%',
-              y: '0px',
-            },
-          ],
-          series: [{
-            values: [28],
-            valueBox: {
-              text: '%v',
-              fontColor: '#FB301E',
-              fontSize: '14px',
-              mediaRules: [{
-                fontSize: '10px',
-                maxWidth: '650px',
-              }, ],
-              placement: 'center',
-            },
-            backgroundColor: '#23211E',
-          }, ],
-        },
+      graphset: [
+        
+        
+       
+     
         {
           type: 'line',
           width: '100%',
@@ -451,6 +168,7 @@
           ],
         },
       ],
+    
     };
 
     zingchart.render({
@@ -475,11 +193,7 @@
           alpha: 0.95,
         };
       };
-      let randomOffset0 = [-5, 5, 3, -3, 2, -2];
-      let randomOffset1 = [10, -10, -5, 5, 3, -3, 2, -2, 7, -7];
-      let output0 = Math.ceil(33 + randomOffset0[Math.floor(Math.random() * 6)]);
-      let output1 = Math.ceil(11 + randomOffset0[Math.floor(Math.random() * 6)]);
-      let output2 = Math.ceil(22 + randomOffset1[Math.floor(Math.random() * 9)]);
+     
 
       // 1) update gauge values
       zingchart.exec('myChart', 'appendseriesdata', {
