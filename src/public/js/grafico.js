@@ -12,7 +12,7 @@ let chartConfig = {
         x: '0px',
         y: '45%',
         title: {
-          text: 'History',
+          text: 'Cotaçoes passadas',
           adjustLayout: true,
           mediaRules: [
             {

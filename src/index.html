@@ -10,7 +10,7 @@
     <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
 <link rel="icon" href="./public/img/logo.webp">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
- 
+    <link rel="stylesheet" href="./public/js/grafico.js">
     
 
     
@@ -71,49 +71,75 @@
 
       
         <header class="mb-auto text-center ">
-            <div>
-              <h3 class="float-start mb-0" style="color: #198545;">Conversor</h3>
-              <nav class="nav nav-masthead justify-content-center float-md-end">
-                  
-                <a class="nav-link" href="#">Contact</a>
-              </nav>
+          <nav class="navbar navbar-expand-lg navbar-custom shadow-sm">
+            <div class="container">
+              <a class="navbar-brand" href="#">Conversor</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#sobre">Sobre</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                  </li>
+                </ul>
+              </div>
             </div>
+          </nav>
           </header>
           
     </nav>
- <br>
-
-
+  
  <div class="carousel text-center " id="fundoImg">
+  
     <div id="fundo">
         <img   class="d-block w-100"  height="550" >
         <div class="carousel-caption  ">
             <h1><strong>Conversor online informal</strong></h1>
-            <br>
+            
             <p class="lead"> Tenha acesso em tempo real às melhores taxas de câmbio informal. </p>
-            <form class="row d-flex justify-content-center" style="align-content: center;" id="send">
-             
-                <div class="col-auto">
-                   
-                  <input type="number" class="form-control" id="coin" value="1000">
-                </div>
-              <div class="col-auto">
-                  <select id="cointype" class="form-control" >
-                      <option value="rub">RUB</option>
-                     <option value="usd">USD</option>
-                     <option value="eur">EUR</option>
-                     
-                   </select>
-              </div>
-               
 
-              
-              
-             
-              <div class=" mt-3">
-                <button type="submit" class="btn btn-success mb-3" id="send">Converter</button>
+            <div class="card" style="background-color:  rgba(74, 78, 76, 0.693);;">
+              <div class="card-body">
+                <form>
+                  <div class="row g-3">
+                    <!-- Valor -->
+                    <div class="col-12 col-md-4">
+                      <label for="valor" class="form-label">Valor</label>
+                      <input type="number" class="form-control" id="valor" placeholder="Digite o valor" required />
+                    </div>
+                    <!-- Moeda de origem -->
+                    <div class="col-12 col-md-4">
+                      <label for="origem" class="form-label">De</label>
+                      <select class="form-select" id="origem" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="BRL">Real Brasileiro (BRL)</option>
+                        <option value="USD">Dólar Americano (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                      </select>
+                    </div>
+                    <!-- Moeda de destino -->
+                    <div class="col-12 col-md-4">
+                      <label for="destino" class="form-label">Para</label>
+                      <select class="form-select" id="destino" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="BRL">Real Brasileiro (BRL)</option>
+                        <option value="USD">Dólar Americano (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                      </select>
+                    </div>
+                    <!-- Botão -->
+                    <div class="col-12 d-flex justify-content-center mt-3">
+                      <button type="submit" class="btn btn-primary w-50">Converter</button>
+                    </div>
+                  </div>
+                </form>
               </div>
-            </form>
+            </div>
             
             <br>
 
@@ -165,12 +191,15 @@
     </div>
   </div>
 </div>
-<br>
-<div   class="zc-body">
-  <div id="myChart" class="chart--container">
-    <a href="https://www.zingchart.com/" rel="noopener" class="zc-ref"> </a>
+ 
+<div class="container">
+  <div   class="zc-body">
+    <div id="myChart" class="chart--container">
+      <a href="https://www.zingchart.com/" rel="noopener" class="zc-ref"> </a>
+    </div>
   </div>
 </div>
+
 
 <div class="container">
   <div class="card">
