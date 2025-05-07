@@ -1,6 +1,7 @@
 
 async function reqGet(dado){
-    fetch('http://127.0.0.1:3000/api/v1/', {
+    const apiUrl = "https://currency-exchange-services.onrender.com/"
+    fetch(`${apiUrl}/api/v1/`, {
         method: 'post', 
         headers: {
             "Content-Type": "application/json" 
