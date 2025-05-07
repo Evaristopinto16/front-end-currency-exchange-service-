@@ -35,7 +35,7 @@
     }
           #fundoImg{
              
-            background-image: url("./public/img/Explore-illo.svg");
+            background-image: url("./public/img/wallet-illo.svg");
              background-repeat: no-repeat;
              background-size: cover;
          }
@@ -73,7 +73,7 @@
         <header class="mb-auto text-center ">
           <nav class="navbar navbar-expand-lg navbar-custom shadow-sm">
             <div class="container">
-              <a class="navbar-brand" href="#">Conversor</a>
+              <a class="navbar-brand" href="#" style="color: #198545;">Conversor</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
                 <span class="navbar-toggler-icon"></span>
@@ -84,7 +84,7 @@
                     <a class="nav-link" href="#sobre">Sobre</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#contato">Contato</a>
+                    <a class="nav-link" href="https://www.linkedin.com/in/evaristo-calucango/">Contato</a>
                   </li>
                 </ul>
               </div>
@@ -105,36 +105,43 @@
 
             <div class="card" style="background-color:  rgba(74, 78, 76, 0.693);;">
               <div class="card-body">
-                <form>
+                <form id="send"   >
                   <div class="row g-3">
                     <!-- Valor -->
                     <div class="col-12 col-md-4">
                       <label for="valor" class="form-label">Valor</label>
-                      <input type="number" class="form-control" id="valor" placeholder="Digite o valor" required />
+                      <input type="number" class="form-control" id="valor" placeholder="Digite o valor" value="1000" />
                     </div>
                     <!-- Moeda de origem -->
                     <div class="col-12 col-md-4">
                       <label for="origem" class="form-label">De</label>
-                      <select class="form-select" id="origem" required>
+                      <select class="form-select" id="cointype" required>
                         <option value="" disabled selected>Selecione</option>
-                        <option value="BRL">Real Brasileiro (BRL)</option>
-                        <option value="USD">Dólar Americano (USD)</option>
-                        <option value="EUR">Euro (EUR)</option>
+                        <option value="aoa">Kwanza (AOA)</option>
+                        <option value="rub" selected>Rublo (RUB)</option>
+                        <option value="eur">Euro (EUR)</option>
+                        <option value="usd">Dolar America (USD)</option>
+                        <option value="mzn">Metical Moçambicano</option>
                       </select>
                     </div>
                     <!-- Moeda de destino -->
                     <div class="col-12 col-md-4">
                       <label for="destino" class="form-label">Para</label>
-                      <select class="form-select" id="destino" required>
-                        <option value="" disabled selected>Selecione</option>
-                        <option value="BRL">Real Brasileiro (BRL)</option>
-                        <option value="USD">Dólar Americano (USD)</option>
-                        <option value="EUR">Euro (EUR)</option>
+                      <select class="form-select" id="cointype2" required>
+                        <option value="" disabled >Selecione</option>
+                        <option value="aoa" selected>Kwanza (AOA)</option>
+                        <option value="rub">Rublo (RUB)</option>
+                        <option value="eur">Euro (EUR)</option>
+                        <option value="usd">Dolar America (USD)</option>
+                        <option value="mzn">Metical Moçambicano</option>
+                    
                       </select>
                     </div>
                     <!-- Botão -->
                     <div class="col-12 d-flex justify-content-center mt-3">
-                      <button type="submit" class="btn btn-primary w-50">Converter</button>
+                      <button type="submit" class="btn btn-success w-50" >
+                        Converter
+                      </button>
                     </div>
                   </div>
                 </form>
@@ -165,7 +172,7 @@
          
         <div class="card-body">
            
-          <p class="card-text">Conversão de: RUB<br> 
+          <p class="card-text">Conversão de: <strong id="origincoin"></strong><br> 
             Valor a converter: <strong id="defaulCoin"></strong>
           <br> <br>
         Ultima Atualização <br>
@@ -179,11 +186,11 @@
      
         <div class="card-body">
           
-          <p class="card-text" >Para: AOA  <br>
+          <p class="card-text" id="show" >Para: <strong id="fromcoin"></strong> <br>
             Resultado da conversão: <br>
           Valor Minimo: <strong id="min"></strong>
          <br> Valor Normal: <strong id="nor"></strong>
-          <br> Valor MAximo: <strong id="max"></strong>
+          <br> Valor Maximo: <strong id="max"></strong>
           
           </p>
         </div>
@@ -192,11 +199,52 @@
   </div>
 </div>
  
-<div class="container">
-  <div   class="zc-body">
-    <div id="myChart" class="chart--container">
-      <a href="https://www.zingchart.com/" rel="noopener" class="zc-ref"> </a>
-    </div>
+<div class="container mt-4">
+  <h5>Cotações passadas</h5>
+
+  <div class="table-responsive">
+      <table class="table table-striped table-hover">
+          <thead>
+              <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Data</th>
+                  <th scope="col"> <strong id="tableorigincoin"> </strong></th>
+                  <th scope="col" id="tablefromcoin"> </th>
+                  
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <th scope="row">1</th>
+                  <td id="a1"> </td>
+                  <td id="b1"> </td>
+                  <td id="c1"> </td>
+                  
+              </tr>
+              <tr>
+                  <th scope="row">2</th>
+                  <td id="a2"> </td>
+                  <td id="b2"> </td>
+                  <td id="c2">I </td>
+                 
+              </tr>
+              <tr>
+                  <th scope="row">3</th>
+                  <td id="a3"> </td>
+                  <td id="b3"> </td>
+                  <td id="c3"> </td>
+                 
+              </tr>
+               <tr>
+                  <th scope="row">4</th>
+                  <td id="a4"> </td>
+                  <td id="b4"> </td>
+                  <td id="c4"> </td>
+                
+              </tr>
+                
+          </tbody>
+      </table>
   </div>
 </div>
 
@@ -268,7 +316,7 @@
     
                         .  
                     </p>
-                    <h1 lang="display-4" align="center"><a class="btn btn-success btn-lg" role="button" onclick="alert('brevemente')">Comece </a> </h1>
+                    <h1 lang="display-4" align="center"><a class="btn btn-success btn-lg" role="button"  href="#">Comece </a> </h1>
                  
                 </div>
              </div>
@@ -359,8 +407,8 @@
                     <div class="col-sm-4">
                         <h4 class="text-center" id="contacto">Social</h4>
                         <div class="btn-group-vertical btn-block w-100 " role="group">
-                            <a href="#" class="btn btn-outline-primary">facebook</a>
-                            <a href="#" class="btn btn-outline-info">Twitter</a>
+                            <a href="https://www.linkedin.com/in/evaristo-calucango/" class="btn btn-outline-primary">Linkedin</a>
+                            <a href="https://github.com/Evaristopinto16/currency-exchange-services" class="btn btn-outline-info">Github</a>
                             <a href="#" class="btn btn-outline-warning">Instragram</a>
             
                         </div>
@@ -393,7 +441,7 @@
 
     
   </body>
-  <script src="./public/js/getdata.js"></script>
+  <script src="./js/apiService.js"></script>
   <script nonce="undefined" src="https://cdn.zingchart.com/zingchart.min.js"></script>
   <script src="./public/js/grafico.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

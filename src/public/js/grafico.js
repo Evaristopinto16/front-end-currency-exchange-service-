@@ -43,7 +43,7 @@ let chartConfig = {
           },
           lineColor: '#FB301E',
           placement: 'default',
-          tick: {
+          tick: { 
             lineColor: '#FB301E',
           },
         },
@@ -108,7 +108,19 @@ let chartConfig = {
           },
           {
             text: 'Energy Recycled',
-            values: [11, 15, 19, 11, 15, 19, 91, 15, 19],
+            values: ['11 057.31 AOA',
+
+              '11 057.31 AOA',
+              
+              '11 088.41 AOA',
+              
+             ' 11 138.53 AOA',
+              
+              '11 166.05 AOA',
+              
+             ' 11 170.87 AOA',
+              
+              '11 101.12 AOA'],
             lineColor: '#E2D51A',
             marker: {
               type: 'triangle',
@@ -121,7 +133,7 @@ let chartConfig = {
           },
           {
             text: 'Energy Consumed',
-            values: [28, 21, 30, 28, 21, 30, 28, 21, 90],
+            values: ['11 057.31 AOA', '11 057.31 AOA','11 088.41 AOA',' 11 138.53 AOA','11 166.05 AOA','11 170.87 AOA','11 101.12 AOA'],
             lineColor: '#FB301E',
             marker: {
               type: 'square',

@@ -23,8 +23,7 @@ async function reqGet(dado){
     day4: { day4: 'domingo', price: '11 064.11 AOA ' }
 
     */
-       console.log()
-        
+     
         let result = data.data.taxasInformal.result
         let {compraMinima, compraNormal,compraMaxima} = result
        result = JSON.stringify(result)
