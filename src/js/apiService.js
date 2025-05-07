@@ -1,6 +1,6 @@
 
 async function reqGet(dado){
-    const apiUrl = "https://currency-exchange-services.onrender.com/"
+    const apiUrl = "https://currency-exchange-services.onrender.com"
     fetch(`${apiUrl}/api/v1/`, {
         method: 'post', 
         headers: {
