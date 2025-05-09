@@ -1,77 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabela Responsiva com Bootstrap</title>
-    <!-- Link para o CSS do Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spinner Responsivo com Bootstrap</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-
-<div class="container mt-4">
-    <h2>Minha Tabela Responsiva</h2>
-
-    <div class="table-responsive">
-        <table class="table table-striped table-hover">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Data</th>
-                    <th scope="col"> </th>
-                    <th scope="col">Lista 3</th>
-                    <th scope="col">Lista 4</th>
-                    <th scope="col">Lista 5</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Item A1</td>
-                    <td>Item B1</td>
-                    <td>Item C1</td>
-                    <td>Item D1</td>
-                    <td>Item E1</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Item A2</td>
-                    <td>Item B2</td>
-                    <td>Item C2</td>
-                    <td>Item D2</td>
-                    <td>Item E2</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Item A3</td>
-                    <td>Item B3</td>
-                    <td>Item C3</td>
-                    <td>Item D3</td>
-                    <td>Item E3</td>
-                </tr>
-                 <tr>
-                    <th scope="row">4</th>
-                    <td>Item A4</td>
-                    <td>Item B4</td>
-                    <td>Item C4</td>
-                    <td>Item D4</td>
-                    <td>Item E4</td>
-                </tr>
-                 <tr>
-                    <th scope="row">5</th>
-                    <td>Item A5</td>
-                    <td>Item B5</td>
-                    <td>Item C5</td>
-                    <td>Item D5</td>
-                    <td>Item E5</td>
-                </tr>
-            </tbody>
-        </table>
+  <!-- Container centralizado -->
+  <div class="d-flex justify-content-center align-items-center vh-100" id="spinner-container">
+    <!-- Spinner -->
+    <div class="spinner-border text-primary" role="status" id="loading-spinner">
+      <span class="visually-hidden">Carregando...</span>
     </div>
-</div>
+  </div>
 
-<!-- Link para o JavaScript do Bootstrap (opcional, mas recomendado para alguns componentes) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script para controlar a exibição do spinner -->
+  <script>
+    // Função simulando uma chamada à API
+    function fetchData() {
+      // Mostra o spinner
+      document.getElementById('spinner-container').style.display = 'flex';
 
+      // Simula uma requisição API com timeout
+      setTimeout(() => {
+        // Esconde o spinner após receber a resposta
+        document.getElementById('spinner-container').style.display = 'none';
+
+        // Aqui você pode manipular os dados recebidos
+        alert('Resposta da API recebida!');
+      }, 3000); // 3 segundos de delay simulando a API
+    }
+
+    // Executa a fetchData ao carregar a página ou sob demanda
+    window.onload = fetchData;
+  </script>
 </body>
 </html>

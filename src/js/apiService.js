@@ -1,3 +1,4 @@
+let models
 
 async function reqGet(dado){
     const apiUrl = "https://currency-exchange-services.onrender.com"
@@ -10,6 +11,10 @@ async function reqGet(dado){
         body: JSON.stringify(dado)})
        .then(response => response.json())
        .then(data => {
+        models = data
+
+        console.log(models)
+      
     
         let status = data.status
        // status = JSON.stringify(status)
