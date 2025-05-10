@@ -11,9 +11,7 @@ async function reqGet(dado){
         body: JSON.stringify(dado)})
        .then(response => response.json())
        .then(data => {
-        models = data
-
-        console.log(models)
+        
       
     
         let status = data.status
@@ -32,34 +30,40 @@ async function reqGet(dado){
      
         let result = data.data.taxasInformal.result
         let {compraMinima, compraNormal,compraMaxima} = result
-       result = JSON.stringify(result)
-        data = JSON.stringify(data)
+       
+      if(compraMaxima){
+
+        document.querySelector("#spinner").style.display = "none"
         
-        document.querySelector("#max").innerHTML = compraMaxima
-        document.querySelector("#min").innerHTML = compraMinima
-        document.querySelector("#nor").innerHTML = compraNormal
-        document.querySelector("#atualizadas").innerHTML = atualizacao
-
-        document.querySelector("#a1").innerText = day.day
-        document.querySelector("#a2").innerText = day2.day2
-        document.querySelector("#a3").innerText = day3.day3
-        document.querySelector("#a4").innerText = day4.day4
-        /*
-
-        */
-        document.querySelector("#b1").innerText = dado.value
-        document.querySelector("#b2").innerText = dado.value
-        document.querySelector("#b3").innerText = dado.value
-        document.querySelector("#b4").innerText = dado.value
-
-        /*
-
-        */
-
-        document.querySelector("#c1").innerText = day.price
-        document.querySelector("#c2").innerText = day2.price
-        document.querySelector("#c3").innerText = day3.price
-        document.querySelector("#c4").innerText = day4.price
+        result = JSON.stringify(result)
+         data = JSON.stringify(data)
+         
+         document.querySelector("#max").innerHTML = compraMaxima
+         document.querySelector("#min").innerHTML = compraMinima
+         document.querySelector("#nor").innerHTML = compraNormal
+         document.querySelector("#atualizadas").innerHTML = atualizacao
+ 
+         document.querySelector("#a1").innerText = day.day
+         document.querySelector("#a2").innerText = day2.day2
+         document.querySelector("#a3").innerText = day3.day3
+         document.querySelector("#a4").innerText = day4.day4
+         /*
+ 
+         */
+         document.querySelector("#b1").innerText = dado.value
+         document.querySelector("#b2").innerText = dado.value
+         document.querySelector("#b3").innerText = dado.value
+         document.querySelector("#b4").innerText = dado.value
+ 
+         /*
+ 
+         */
+ 
+         document.querySelector("#c1").innerText = day.price
+         document.querySelector("#c2").innerText = day2.price
+         document.querySelector("#c3").innerText = day3.price
+         document.querySelector("#c4").innerText = day4.price
+      }
        
        
        })
@@ -80,11 +84,22 @@ const send = document.querySelector("#send")
 
 send.addEventListener("submit", (data)=>{
 
+            document.querySelector("#spinner").style.display = "flex"
+
     let value = data.srcElement[0].value
     coin = value
     console.log(coin);
     let typecoin = document.querySelector("#cointype").value
     let typecoin2 = document.querySelector("#cointype2").value
+   let dado = {
+        coin: typecoin,
+        conversionto:typecoin2,
+        value: coin
+    }
+
+    if(typecoin == typecoin2){
+     document.querySelector("#spinner").style.display = "none"
+    }
   typecoin =  typecoin.toUpperCase()
   typecoin2 = typecoin2.toUpperCase()
     document.querySelector("#origincoin").innerHTML = typecoin
@@ -92,12 +107,8 @@ send.addEventListener("submit", (data)=>{
     
     document.querySelector("#tableorigincoin").innerText = typecoin
 document.querySelector("#tablefromcoin").innerText = typecoin2
-document.querySelector("#a1").innerText = "erer"
-    const dado = {
-        coin: typecoin,
-        conversionto:typecoin2,
-        value: coin
-    }
+ 
+  
     document.querySelector("#defaulCoin").innerHTML = coin
     reqGet(dado)
 
@@ -128,7 +139,7 @@ document.querySelector("#tablefromcoin").innerText = typecoin2
     document.querySelector("#defaulCoin").innerHTML = coin
     reqGet(dado)
 }
-console.log(coin)
+ 
 
 
     

@@ -2,39 +2,48 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Spinner Responsivo com Bootstrap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Card Spinner Centralizado</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f8f9fa; /* Cor de fundo suave */
+    }
+    .card-custom {
+      max-width: 300px;
+      width: 100%;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    /* Opcional: estilização adicional para o spinner */
+    .spinner-border {
+      width: 3rem;
+      height: 3rem;
+      border-width: 0.4em;
+      border-color: #0d6efd transparent #0d6efd transparent; /* animação bonita em cores do Bootstrap */
+    }
+  </style>
 </head>
 <body>
-  <!-- Container centralizado -->
-  <div class="d-flex justify-content-center align-items-center vh-100" id="spinner-container">
-    <!-- Spinner -->
-    <div class="spinner-border text-primary" role="status" id="loading-spinner">
+
+  <div class="card-custom text-center">
+    <h5 class="mb-3">Carregando...</h5>
+    <div class="spinner-border text-primary" role="status">
       <span class="visually-hidden">Carregando...</span>
     </div>
   </div>
 
-  <!-- Script para controlar a exibição do spinner -->
-  <script>
-    // Função simulando uma chamada à API
-    function fetchData() {
-      // Mostra o spinner
-      document.getElementById('spinner-container').style.display = 'flex';
-
-      // Simula uma requisição API com timeout
-      setTimeout(() => {
-        // Esconde o spinner após receber a resposta
-        document.getElementById('spinner-container').style.display = 'none';
-
-        // Aqui você pode manipular os dados recebidos
-        alert('Resposta da API recebida!');
-      }, 3000); // 3 segundos de delay simulando a API
-    }
-
-    // Executa a fetchData ao carregar a página ou sob demanda
-    window.onload = fetchData;
-  </script>
+  <!-- Bootstrap JS (opcional, se precisar de componentes interativos) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
